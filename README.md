@@ -16,7 +16,7 @@ See the how-to-play menu in the main menu
 ## Questions?
 Honestly just write an issue.
 
-## License 
+## License
 
-Please note, that even though the Project is licensed under the MIT License, this obviously can't apply to those files, that are licensed by another incompatible license.
+Please note, that even though the Project is licensed under the GPLv3 License, this obviously can't apply to those files, that are licensed by another incompatible license.
 Those other licenses are specified inside the correspending folder/file or in another simlarly named license-file.
