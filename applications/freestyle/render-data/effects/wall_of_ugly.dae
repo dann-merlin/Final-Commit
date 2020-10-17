@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.81.16 commit date:2019-12-04, commit time:11:32, hash:f1aa4d18d49d</authoring_tool>
+    </contributor>
+    <created>2020-01-28T15:40:57</created>
+    <modified>2020-01-28T15:40:57</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material-effect">
+      <profile_COMMON>
+        <newparam sid="wall_of_ugly_png-surface">
+          <surface type="2D">
+            <init_from>wall_of_ugly_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="wall_of_ugly_png-sampler">
+          <sampler2D>
+            <source>wall_of_ugly_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="wall_of_ugly_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="wall_of_ugly_png" name="wall_of_ugly_png">
+      <init_from>wall_of_ugly.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material-material" name="Material">
+      <instance_effect url="#Material-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane-mesh" name="Plane">
+      <mesh>
+        <source id="Plane-mesh-positions">
+          <float_array id="Plane-mesh-positions-array" count="300">-1 -6 -13 1 -6 -13 -1 -6 -11 1 -6 -11 3 -6 -13 5 -6 -13 3 -6 -11 5 -6 -11 -5 -6 -13 -3 -6 -13 -5 -6 -11 -3 -6 -11 -9 -6 -13 -7 -6 -13 -9 -6 -11 -7 -6 -11 -1 -6 -5 1 -6 -5 -1 -6 -3 1 -6 -3 3 -6 -5 5 -6 -5 3 -6 -3 5 -6 -3 -5 -6 -5 -3 -6 -5 -5 -6 -3 -3 -6 -3 -9 -6 -5 -7 -6 -5 -9 -6 -3 -7 -6 -3 -1 -6 -9 1 -6 -9 -1 -6 -7 1 -6 -7 3 -6 -9 5 -6 -9 3 -6 -7 5 -6 -7 -5 -6 -9 -3 -6 -9 -5 -6 -7 -3 -6 -7 -9 -6 -9 -7 -6 -9 -9 -6 -7 -7 -6 -7 -1 -6 -17 1 -6 -17 -1 -6 -15 1 -6 -15 3 -6 -17 5 -6 -17 3 -6 -15 5 -6 -15 -5 -6 -17 -3 -6 -17 -5 -6 -15 -3 -6 -15 -9 -6 -17 -7 -6 -17 -9 -6 -15 -7 -6 -15 -1 -6 -21 1 -6 -21 -1 -6 -19 1 -6 -19 3 -6 -21 5 -6 -21 3 -6 -19 5 -6 -19 -5 -6 -21 -3 -6 -21 -5 -6 -19 -3 -6 -19 -9 -6 -21 -7 -6 -21 -9 -6 -19 -7 -6 -19 7 -6 -13 9 -6 -13 7 -6 -11 9 -6 -11 7 -6 -5 9 -6 -5 7 -6 -3 9 -6 -3 7 -6 -9 9 -6 -9 7 -6 -7 9 -6 -7 7 -6 -17 9 -6 -17 7 -6 -15 9 -6 -15 7 -6 -21 9 -6 -21 7 -6 -19 9 -6 -19</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-positions-array" count="100" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-normals">
+          <float_array id="Plane-mesh-normals-array" count="3">0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-map-0">
+          <float_array id="Plane-mesh-map-0-array" count="300">0.2 0.6 0.4 0.4 0.4 0.6 0.4 0.5999999 0.6 0.4 0.6 0.5999999 0.6 0.7999999 0.8 0.5999999 0.8 0.7999999 0.2 0.9999999 0.3999999 0.8 0.3999999 0.9999999 0 0.2 0.2 0 0.2 0.2 0 0.6000002 0.1999999 0.4 0.2 0.6000002 0.4 0.2 0.6 0 0.6 0.2 0.4 0.8 0.5999999 0.5999999 0.5999999 0.7999999 0.8 0.5999999 1 0.4 1 0.5999999 0.8000001 0.9999997 1 0.7999999 1 0.9999997 0.8 0.1999999 1 0 1 0.1999999 0.6 0.9999997 0.8 0.7999999 0.8 0.9999997 0 0.8000001 0.2 0.6000002 0.2 0.8000001 0.6 0.5999999 0.8000001 0.4 0.8000001 0.5999999 0.2 0.8 0.4 0.6 0.4 0.8 0 0.4 0.1999999 0.2 0.2 0.4 0.6 0.1999999 0.8 0 0.8 0.1999999 0.4 0.4 0.6 0.2 0.6 0.4 0.2 0.3999999 0.4 0.2 0.4 0.3999999 0.6000001 0.4 0.8000001 0.2 0.8000001 0.4 0.8 0.3999999 1 0.1999999 1 0.3999999 0.2 0.2 0.4 0 0.4 0.1999999 0.8 0.7999998 0.9999999 0.5999999 1 0.7999998 0.4000001 0.9999998 0.6 0.8 0.6 0.9999998 0 1 0.1999999 0.8000001 0.1999999 1 0.2 0.6 0.2 0.4 0.4 0.4 0.4 0.5999999 0.4 0.4 0.6 0.4 0.6 0.7999999 0.6 0.5999999 0.8 0.5999999 0.2 0.9999999 0.2 0.8 0.3999999 0.8 0 0.2 0 0 0.2 0 0 0.6000002 0 0.4000001 0.1999999 0.4 0.4 0.2 0.4 0 0.6 0 0.4 0.8 0.4 0.5999999 0.5999999 0.5999999 0.8 0.5999999 0.8 0.4 1 0.4 0.8000001 0.9999997 0.8 0.7999999 1 0.7999999 0.8 0.1999999 0.8 0 1 0 0.6 0.9999997 0.6 0.7999999 0.8 0.7999999 0 0.8000001 0 0.6000002 0.2 0.6000002 0.6 0.5999999 0.6 0.4 0.8000001 0.4 0.2 0.8 0.2 0.6 0.4 0.6 0 0.4 0 0.2 0.1999999 0.2 0.6 0.1999999 0.6 0 0.8 0 0.4 0.4 0.4 0.2 0.6 0.2 0.2 0.3999999 0.2 0.2 0.4 0.2 0.6000001 0.4 0.6 0.2 0.8000001 0.2 0.8 0.3999999 0.8 0.1999999 1 0.1999999 0.2 0.2 0.2 0 0.4 0 0.8 0.7999998 0.8 0.6 0.9999999 0.5999999 0.4000001 0.9999998 0.4 0.8 0.6 0.8 0 1 0 0.8000001 0.1999999 0.8000001</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-map-0-array" count="150" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane-mesh-vertices">
+          <input semantic="POSITION" source="#Plane-mesh-positions"/>
+        </vertices>
+        <triangles material="Material-material" count="50">
+          <input semantic="VERTEX" source="#Plane-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 5 0 3 6 0 4 4 0 5 9 0 6 10 0 7 8 0 8 13 0 9 14 0 10 12 0 11 17 0 12 18 0 13 16 0 14 21 0 15 22 0 16 20 0 17 25 0 18 26 0 19 24 0 20 29 0 21 30 0 22 28 0 23 33 0 24 34 0 25 32 0 26 37 0 27 38 0 28 36 0 29 41 0 30 42 0 31 40 0 32 45 0 33 46 0 34 44 0 35 49 0 36 50 0 37 48 0 38 53 0 39 54 0 40 52 0 41 57 0 42 58 0 43 56 0 44 61 0 45 62 0 46 60 0 47 65 0 48 66 0 49 64 0 50 69 0 51 70 0 52 68 0 53 73 0 54 74 0 55 72 0 56 77 0 57 78 0 58 76 0 59 81 0 60 82 0 61 80 0 62 85 0 63 86 0 64 84 0 65 89 0 66 90 0 67 88 0 68 93 0 69 94 0 70 92 0 71 97 0 72 98 0 73 96 0 74 1 0 75 3 0 76 2 0 77 5 0 78 7 0 79 6 0 80 9 0 81 11 0 82 10 0 83 13 0 84 15 0 85 14 0 86 17 0 87 19 0 88 18 0 89 21 0 90 23 0 91 22 0 92 25 0 93 27 0 94 26 0 95 29 0 96 31 0 97 30 0 98 33 0 99 35 0 100 34 0 101 37 0 102 39 0 103 38 0 104 41 0 105 43 0 106 42 0 107 45 0 108 47 0 109 46 0 110 49 0 111 51 0 112 50 0 113 53 0 114 55 0 115 54 0 116 57 0 117 59 0 118 58 0 119 61 0 120 63 0 121 62 0 122 65 0 123 67 0 124 66 0 125 69 0 126 71 0 127 70 0 128 73 0 129 75 0 130 74 0 131 77 0 132 79 0 133 78 0 134 81 0 135 83 0 136 82 0 137 85 0 138 87 0 139 86 0 140 89 0 141 91 0 142 90 0 143 93 0 144 95 0 145 94 0 146 97 0 147 99 0 148 98 0 149</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="wall_of_ugly_Plane-skin" name="wall_of_ugly">
+      <skin source="#Plane-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="wall_of_ugly_Plane-skin-joints">
+          <Name_array id="wall_of_ugly_Plane-skin-joints-array" count="25">Bone_Root Bone_001 Bone_002 Bone_004 Bone_005 Bone_006 Bone_007 Bone_008 Bone_010 Bone_011 Bone_012 Bone_013 Bone_014 Bone_016 Bone_017 Bone_024 Bone_025 Bone_026 Bone_028 Bone_029 Bone_030 Bone_031 Bone_032 Bone_034 Bone_035</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_Plane-skin-joints-array" count="25" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_Plane-skin-bind_poses">
+          <float_array id="wall_of_ugly_Plane-skin-bind_poses-array" count="400">1 0 -6.27833e-7 -7.53399e-6 0 -1 0 -6 -6.27833e-7 0 -1 -12 0 0 0 1 1 0 -1.0411e-6 -8.32878e-6 0 -1 0 -6 -1.0411e-6 0 -1 -8 0 0 0 1 1 0 -1.51793e-6 -6.07174e-6 0 -1 0 -6 -1.51793e-6 0 -1 -4 0 0 0 1 1 0 -1.75635e-6 -2.81016e-5 0 -1 0 -6 -1.75635e-6 0 -1 -16 0 0 0 1 1 0 -2.23319e-6 -4.46638e-5 0 -1 0 -6 -2.23319e-6 0 -1 -20 0 0 0 1 1 0 -1.0411e-6 -4.000012 0 -1 0 -6 -1.0411e-6 0 -1 -12 0 0 0 1 1 0 -1.51793e-6 -4.000012 0 -1 0 -6 -1.51793e-6 0 -1 -7.999994 0 0 0 1 1 0 -1.99477e-6 -4.000008 0 -1 0 -6 -1.99477e-6 0 -1 -3.999992 0 0 0 1 1 0 -2.23319e-6 -4.000035 0 -1 0 -6 -2.23319e-6 0 -1 -15.99999 0 0 0 1 1 0 -2.71003e-6 -4.000054 0 -1 0 -6 -2.71003e-6 0 -1 -19.99999 0 0 0 1 1 0 -1.27952e-6 -8.000016 0 -1 0 -6 -1.27952e-6 0 -1 -11.99999 0 0 0 1 1 0 -1.75635e-6 -8.000015 0 -1 0 -6 -1.75635e-6 0 -1 -7.999986 0 0 0 1 1 0 -2.23319e-6 -8.000009 0 -1 0 -6 -2.23319e-6 0 -1 -3.999983 0 0 0 1 1 0 -2.47161e-6 -8.00004 0 -1 0 -6 -2.47161e-6 0 -1 -15.99998 0 0 0 1 1 0 -2.94845e-6 -8.000059 0 -1 0 -6 -2.94845e-6 0 -1 -19.99998 0 0 0 1 1 0 -1.51793e-6 7.999982 0 -1 0 -6 -1.51793e-6 0 -1 -12.00001 0 0 0 1 1 0 -1.99477e-6 7.999984 0 -1 0 -6 -1.99477e-6 0 -1 -8.000016 0 0 0 1 1 0 -2.47161e-6 7.999989 0 -1 0 -6 -2.47161e-6 0 -1 -4.00002 0 0 0 1 1 0 -2.71003e-6 7.999957 0 -1 0 -6 -2.71003e-6 0 -1 -16.00002 0 0 0 1 1 0 -3.18686e-6 7.999936 0 -1 0 -6 -3.18686e-6 0 -1 -20.00002 0 0 0 1 1 0 -1.51793e-6 3.999982 0 -1 0 -6 -1.51793e-6 0 -1 -12.00001 0 0 0 1 1 0 -1.99477e-6 3.999984 0 -1 0 -6 -1.99477e-6 0 -1 -8.000008 0 0 0 1 1 0 -2.47161e-6 3.99999 0 -1 0 -6 -2.47161e-6 0 -1 -4.00001 0 0 0 1 1 0 -2.71003e-6 3.999957 0 -1 0 -6 -2.71003e-6 0 -1 -16.00001 0 0 0 1 1 0 -3.18686e-6 3.999936 0 -1 0 -6 -3.18686e-6 0 -1 -20.00002 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_Plane-skin-bind_poses-array" count="25" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_Plane-skin-weights">
+          <float_array id="wall_of_ugly_Plane-skin-weights-array" count="100">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_Plane-skin-weights-array" count="100" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#wall_of_ugly_Plane-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#wall_of_ugly_Plane-skin-bind_poses"/>
+        </joints>
+        <vertex_weights count="100">
+          <input semantic="JOINT" source="#wall_of_ugly_Plane-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#wall_of_ugly_Plane-skin-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 1 0 2 0 3 5 4 5 5 5 6 5 7 20 8 20 9 20 10 20 11 15 12 15 13 15 14 15 15 2 16 2 17 2 18 2 19 7 20 7 21 7 22 7 23 22 24 22 25 22 26 22 27 17 28 17 29 17 30 17 31 1 32 1 33 1 34 1 35 6 36 6 37 6 38 6 39 21 40 21 41 21 42 21 43 16 44 16 45 16 46 16 47 3 48 3 49 3 50 3 51 8 52 8 53 8 54 8 55 23 56 23 57 23 58 23 59 18 60 18 61 18 62 18 63 4 64 4 65 4 66 4 67 9 68 9 69 9 70 9 71 24 72 24 73 24 74 24 75 19 76 19 77 19 78 19 79 10 80 10 81 10 82 10 83 12 84 12 85 12 86 12 87 11 88 11 89 11 90 11 91 13 92 13 93 13 94 13 95 14 96 14 97 14 98 14 99</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_animations>
+    <animation id="action_container-wall_of_ugly" name="wall_of_ugly">
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-output-array" count="336">1 0 -4.13264e-7 -2.51133e-6 0 1 0 0 4.13264e-7 0 1 -4 0 0 0 1 1 0 -4.13264e-7 -2.51133e-6 0 1 0 0 4.13264e-7 0 1 -4 0 0 0 1 1 0 -4.13264e-7 -2.51133e-6 0 1 0 0 4.13264e-7 0 1 -4 0 0 0 1 1 0 -4.13264e-7 -2.51133e-6 0 1 0 0 4.13264e-7 0 1 -4 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -3.466075 0 1 0 1.43051e-6 4.13264e-7 0 1 -15.5062 0 0 0 1 1 0 -4.13264e-7 -2.51133e-6 0 1 0 0 4.13264e-7 0 1 -4 0 0 0 1 1 0 -4.13264e-7 -2.51133e-6 0 1 0 0 4.13264e-7 0 1 -4 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_001_pose_matrix-sampler" target="wall_of_ugly_Bone_001/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-output-array" count="336">1 0 -8.90101e-7 -5.02266e-6 0 1 0 0 8.90101e-7 0 1 -8 0 0 0 1 1 0 -8.90101e-7 -5.02266e-6 0 1 0 0 8.90101e-7 0 1 -8 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -2.045555 0 1 0 9.53674e-7 8.90101e-7 0 1 -13.73889 0 0 0 1 1 0 -8.90101e-7 -5.02266e-6 0 1 0 0 8.90101e-7 0 1 -8 0 0 0 1 1 0 -8.90101e-7 -5.02266e-6 0 1 0 0 8.90101e-7 0 1 -8 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_002_pose_matrix-sampler" target="wall_of_ugly_Bone_002/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-output-array" count="336">1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 3.354687 0 1 0 2.86102e-6 1.12852e-6 0 1 -15.88272 0 0 0 1 1 0 -1.12852e-6 3.354687 0 1 0 2.86102e-6 1.12852e-6 0 1 -15.88272 0 0 0 1 1 0 -1.12852e-6 3.354687 0 1 0 2.86102e-6 1.12852e-6 0 1 -15.88272 0 0 0 1 1 0 -1.12852e-6 3.354687 0 1 0 2.86102e-6 1.12852e-6 0 1 -15.88272 0 0 0 1 1 0 -1.12852e-6 3.354687 0 1 0 2.86102e-6 1.12852e-6 0 1 -15.88272 0 0 0 1 1 0 -1.12852e-6 3.354687 0 1 0 2.86102e-6 1.12852e-6 0 1 -15.88272 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1 1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_004_pose_matrix-sampler" target="wall_of_ugly_Bone_004/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-output-array" count="336">1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 -3.231975 0 1 0 3.33786e-6 1.60536e-6 0 1 -16.7102 0 0 0 1 1 0 -1.60536e-6 -3.231975 0 1 0 3.33786e-6 1.60536e-6 0 1 -16.7102 0 0 0 1 1 0 -1.60536e-6 -3.231975 0 1 0 3.33786e-6 1.60536e-6 0 1 -16.7102 0 0 0 1 1 0 -1.60536e-6 -3.231975 0 1 0 3.33786e-6 1.60536e-6 0 1 -16.7102 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1 1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_005_pose_matrix-sampler" target="wall_of_ugly_Bone_005/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-output-array" count="336">1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1 1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1 1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1 1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1 1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1 1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1 1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 -2.477574 0 1 0 1.90735e-6 4.13264e-7 0 1 -12.92104 0 0 0 1 1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1 1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_006_pose_matrix-sampler" target="wall_of_ugly_Bone_006/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-output-array" count="336">1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1 1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1 1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1 1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1 1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1 1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 -5.00001 0 1 0 0 8.90101e-7 0 1 -16 0 0 0 1 1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1 1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_007_pose_matrix-sampler" target="wall_of_ugly_Bone_007/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-output-array" count="336">1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 -0.5456682 0 1 0 9.53674e-7 1.36694e-6 0 1 -14.56279 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1 1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_008_pose_matrix-sampler" target="wall_of_ugly_Bone_008/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-output-array" count="336">1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.531833 0 1 0 2.38419e-6 1.60536e-6 0 1 -14.20537 0 0 0 1 1 0 -1.60536e-6 4.531833 0 1 0 2.38419e-6 1.60536e-6 0 1 -14.20537 0 0 0 1 1 0 -1.60536e-6 4.531833 0 1 0 2.38419e-6 1.60536e-6 0 1 -14.20537 0 0 0 1 1 0 -1.60536e-6 4.531833 0 1 0 2.38419e-6 1.60536e-6 0 1 -14.20537 0 0 0 1 1 0 -1.60536e-6 4.531833 0 1 0 2.38419e-6 1.60536e-6 0 1 -14.20537 0 0 0 1 1 0 -1.60536e-6 4.531833 0 1 0 2.38419e-6 1.60536e-6 0 1 -14.20537 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1 1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_010_pose_matrix-sampler" target="wall_of_ugly_Bone_010/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-output-array" count="336">1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 0.1543603 0 1 0 3.33786e-6 2.08219e-6 0 1 -17.4466 0 0 0 1 1 0 -2.08219e-6 0.1543603 0 1 0 3.33786e-6 2.08219e-6 0 1 -17.4466 0 0 0 1 1 0 -2.08219e-6 0.1543603 0 1 0 3.33786e-6 2.08219e-6 0 1 -17.4466 0 0 0 1 1 0 -2.08219e-6 0.1543603 0 1 0 3.33786e-6 2.08219e-6 0 1 -17.4466 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1 1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_011_pose_matrix-sampler" target="wall_of_ugly_Bone_011/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-output-array" count="336">1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 -1.88682 0 1 0 1.90735e-6 6.51683e-7 0 1 -15.3416 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1 1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_012_pose_matrix-sampler" target="wall_of_ugly_Bone_012/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-output-array" count="336">1 0 -1.12852e-6 7.999998 0 1 0 0 1.12852e-6 0 1 -4.000005 0 0 0 1 1 0 -1.12852e-6 7.999998 0 1 0 0 1.12852e-6 0 1 -4.000005 0 0 0 1 1 0 -1.12852e-6 7.999998 0 1 0 0 1.12852e-6 0 1 -4.000005 0 0 0 1 1 0 -1.12852e-6 7.999998 0 1 0 0 1.12852e-6 0 1 -4.000005 0 0 0 1 1 0 -1.12852e-6 7.999998 0 1 0 0 1.12852e-6 0 1 -4.000005 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 2.673046 0 1 0 1.43051e-6 1.12852e-6 0 1 -13.23337 0 0 0 1 1 0 -1.12852e-6 7.999998 0 1 0 0 1.12852e-6 0 1 -4.000005 0 0 0 1 1 0 -1.12852e-6 7.999998 0 1 0 0 1.12852e-6 0 1 -4.000005 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_013_pose_matrix-sampler" target="wall_of_ugly_Bone_013/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-output-array" count="336">1 0 -1.60536e-6 7.999995 0 1 0 0 1.60536e-6 0 1 -8.000005 0 0 0 1 1 0 -1.60536e-6 7.999995 0 1 0 0 1.60536e-6 0 1 -8.000005 0 0 0 1 1 0 -1.60536e-6 7.999995 0 1 0 0 1.60536e-6 0 1 -8.000005 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 1.067861 0 1 0 4.76837e-7 1.60536e-6 0 1 -13.25592 0 0 0 1 1 0 -1.60536e-6 7.999995 0 1 0 0 1.60536e-6 0 1 -8.000005 0 0 0 1 1 0 -1.60536e-6 7.999995 0 1 0 0 1.60536e-6 0 1 -8.000005 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_014_pose_matrix-sampler" target="wall_of_ugly_Bone_014/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-output-array" count="336">1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 2.026991 0 1 0 2.86102e-6 1.84378e-6 0 1 -17.3146 0 0 0 1 1 0 -1.84378e-6 2.026991 0 1 0 2.86102e-6 1.84378e-6 0 1 -17.3146 0 0 0 1 1 0 -1.84378e-6 2.026991 0 1 0 2.86102e-6 1.84378e-6 0 1 -17.3146 0 0 0 1 1 0 -1.84378e-6 2.026991 0 1 0 2.86102e-6 1.84378e-6 0 1 -17.3146 0 0 0 1 1 0 -1.84378e-6 2.026991 0 1 0 2.86102e-6 1.84378e-6 0 1 -17.3146 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1 1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_016_pose_matrix-sampler" target="wall_of_ugly_Bone_016/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-output-array" count="336">1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 4.440739 0 1 0 2.86102e-6 2.32061e-6 0 1 -12.98731 0 0 0 1 1 0 -2.32061e-6 4.440739 0 1 0 2.86102e-6 2.32061e-6 0 1 -12.98731 0 0 0 1 1 0 -2.32061e-6 4.440739 0 1 0 2.86102e-6 2.32061e-6 0 1 -12.98731 0 0 0 1 1 0 -2.32061e-6 4.440739 0 1 0 2.86102e-6 2.32061e-6 0 1 -12.98731 0 0 0 1 1 0 -2.32061e-6 4.440739 0 1 0 2.86102e-6 2.32061e-6 0 1 -12.98731 0 0 0 1 1 0 -2.32061e-6 4.440739 0 1 0 2.86102e-6 2.32061e-6 0 1 -12.98731 0 0 0 1 1 0 -2.32061e-6 4.440739 0 1 0 2.86102e-6 2.32061e-6 0 1 -12.98731 0 0 0 1 1 0 -2.32061e-6 4.440739 0 1 0 2.86102e-6 2.32061e-6 0 1 -12.98731 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1 1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_017_pose_matrix-sampler" target="wall_of_ugly_Bone_017/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-output-array" count="336">1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1 1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1 1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1 1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1 1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1 1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1 1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -4.863503 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.19378 0 0 0 1 1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1 1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_024_pose_matrix-sampler" target="wall_of_ugly_Bone_024/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-output-array" count="336">1 0 -1.36694e-6 -8.000003 0 1 0 0 1.36694e-6 0 1 -3.999995 0 0 0 1 1 0 -1.36694e-6 -8.000003 0 1 0 0 1.36694e-6 0 1 -3.999995 0 0 0 1 1 0 -1.36694e-6 -8.000003 0 1 0 0 1.36694e-6 0 1 -3.999995 0 0 0 1 1 0 -1.36694e-6 -8.000003 0 1 0 0 1.36694e-6 0 1 -3.999995 0 0 0 1 1 0 -1.36694e-6 -8.000003 0 1 0 0 1.36694e-6 0 1 -3.999995 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 0.9322124 0 1 0 1.43051e-6 1.36694e-6 0 1 -15.93236 0 0 0 1 1 0 -1.36694e-6 -8.000003 0 1 0 0 1.36694e-6 0 1 -3.999995 0 0 0 1 1 0 -1.36694e-6 -8.000003 0 1 0 0 1.36694e-6 0 1 -3.999995 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_025_pose_matrix-sampler" target="wall_of_ugly_Bone_025/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-output-array" count="336">1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1 1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1 1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1 1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1 1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1 1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -6.147697 0 1 0 0 1.84378e-6 0 1 -14.36933 0 0 0 1 1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1 1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_026_pose_matrix-sampler" target="wall_of_ugly_Bone_026/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-output-array" count="336">1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -1.208794 0 1 0 2.86102e-6 2.08219e-6 0 1 -15.88271 0 0 0 1 1 0 -2.08219e-6 -1.208794 0 1 0 2.86102e-6 2.08219e-6 0 1 -15.88271 0 0 0 1 1 0 -2.08219e-6 -1.208794 0 1 0 2.86102e-6 2.08219e-6 0 1 -15.88271 0 0 0 1 1 0 -2.08219e-6 -1.208794 0 1 0 2.86102e-6 2.08219e-6 0 1 -15.88271 0 0 0 1 1 0 -2.08219e-6 -1.208794 0 1 0 2.86102e-6 2.08219e-6 0 1 -15.88271 0 0 0 1 1 0 -2.08219e-6 -1.208794 0 1 0 2.86102e-6 2.08219e-6 0 1 -15.88271 0 0 0 1 1 0 -2.08219e-6 -1.208794 0 1 0 2.86102e-6 2.08219e-6 0 1 -15.88271 0 0 0 1 1 0 -2.08219e-6 -1.208794 0 1 0 2.86102e-6 2.08219e-6 0 1 -15.88271 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1 1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_028_pose_matrix-sampler" target="wall_of_ugly_Bone_028/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-output-array" count="336">1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -0.186018 0 1 0 2.86102e-6 2.55903e-6 0 1 -12.86458 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1 1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_029_pose_matrix-sampler" target="wall_of_ugly_Bone_029/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-output-array" count="336">1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1 1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1 1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1 1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1 1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1 1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1 1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -0.6248558 0 1 0 1.90735e-6 8.90101e-7 0 1 -13.39833 0 0 0 1 1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1 1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_030_pose_matrix-sampler" target="wall_of_ugly_Bone_030/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-output-array" count="336">1 0 -1.36694e-6 -4.000002 0 1 0 0 1.36694e-6 0 1 -3.999997 0 0 0 1 1 0 -1.36694e-6 -4.000002 0 1 0 0 1.36694e-6 0 1 -3.999997 0 0 0 1 1 0 -1.36694e-6 -4.000002 0 1 0 0 1.36694e-6 0 1 -3.999997 0 0 0 1 1 0 -1.36694e-6 -4.000002 0 1 0 0 1.36694e-6 0 1 -3.999997 0 0 0 1 1 0 -1.36694e-6 -4.000002 0 1 0 0 1.36694e-6 0 1 -3.999997 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -3.727269 0 1 0 1.43051e-6 1.36694e-6 0 1 -13.61407 0 0 0 1 1 0 -1.36694e-6 -4.000002 0 1 0 0 1.36694e-6 0 1 -3.999997 0 0 0 1 1 0 -1.36694e-6 -4.000002 0 1 0 0 1.36694e-6 0 1 -3.999997 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_031_pose_matrix-sampler" target="wall_of_ugly_Bone_031/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-output-array" count="336">1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 2.704838 0 1 0 9.53674e-7 1.84378e-6 0 1 -14.70485 0 0 0 1 1 0 -1.84378e-6 2.704838 0 1 0 9.53674e-7 1.84378e-6 0 1 -14.70485 0 0 0 1 1 0 -1.84378e-6 2.704838 0 1 0 9.53674e-7 1.84378e-6 0 1 -14.70485 0 0 0 1 1 0 -1.84378e-6 2.704838 0 1 0 9.53674e-7 1.84378e-6 0 1 -14.70485 0 0 0 1 1 0 -1.84378e-6 2.704838 0 1 0 9.53674e-7 1.84378e-6 0 1 -14.70485 0 0 0 1 1 0 -1.84378e-6 2.704838 0 1 0 9.53674e-7 1.84378e-6 0 1 -14.70485 0 0 0 1 1 0 -1.84378e-6 2.704838 0 1 0 9.53674e-7 1.84378e-6 0 1 -14.70485 0 0 0 1 1 0 -1.84378e-6 2.704838 0 1 0 9.53674e-7 1.84378e-6 0 1 -14.70485 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1 1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_032_pose_matrix-sampler" target="wall_of_ugly_Bone_032/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-output-array" count="336">1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 0.9093041 0 1 0 2.38419e-6 2.08219e-6 0 1 -14.40992 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1 1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_034_pose_matrix-sampler" target="wall_of_ugly_Bone_034/transform"/>
+      </animation>
+      <animation id="wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix" name="wall_of_ugly">
+        <source id="wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-input">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-input-array" count="21">0 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 2 2.033333 3</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-input-array" count="21" stride="1">
+              <param name="TIME" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-output">
+          <float_array id="wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-output-array" count="336">1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -1.545355 0 1 0 3.33786e-6 2.55903e-6 0 1 -17.77389 0 0 0 1 1 0 -2.55903e-6 -1.545355 0 1 0 3.33786e-6 2.55903e-6 0 1 -17.77389 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1 1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-output-array" count="21" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-interpolation">
+          <Name_array id="wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-interpolation-array" count="21">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+          <technique_common>
+            <accessor source="#wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-interpolation-array" count="21" stride="1">
+              <param name="INTERPOLATION" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <sampler id="wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-sampler">
+          <input semantic="INPUT" source="#wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-input"/>
+          <input semantic="OUTPUT" source="#wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-output"/>
+          <input semantic="INTERPOLATION" source="#wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-interpolation"/>
+        </sampler>
+        <channel source="#wall_of_ugly_wall_of_ugly_Bone_035_pose_matrix-sampler" target="wall_of_ugly_Bone_035/transform"/>
+      </animation>
+    </animation>
+  </library_animations>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="wall_of_ugly" name="wall_of_ugly" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="wall_of_ugly_Bone_Root" name="Bone_Root" sid="Bone_Root" type="JOINT">
+          <matrix sid="transform">1 0 -6.27833e-7 0 0 -1 0 -6 -6.27833e-7 0 -1 -12 0 0 0 1</matrix>
+          <node id="wall_of_ugly_Bone_001" name="Bone.001" sid="Bone_001" type="JOINT">
+            <matrix sid="transform">1 0 -4.13264e-7 -2.51133e-6 0 1 0 0 4.13264e-7 0 1 -4 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_002" name="Bone.002" sid="Bone_002" type="JOINT">
+            <matrix sid="transform">1 0 -8.90101e-7 -5.02266e-6 0 1 0 0 8.90101e-7 0 1 -8 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_004" name="Bone.004" sid="Bone_004" type="JOINT">
+            <matrix sid="transform">1 0 -1.12852e-6 2.51133e-6 0 1 0 0 1.12852e-6 0 1 4 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_005" name="Bone.005" sid="Bone_005" type="JOINT">
+            <matrix sid="transform">1 0 -1.60536e-6 5.02266e-6 0 1 0 0 1.60536e-6 0 1 8 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_006" name="Bone.006" sid="Bone_006" type="JOINT">
+            <matrix sid="transform">1 0 -4.13264e-7 4 0 1 0 0 4.13264e-7 0 1 -2.51133e-6 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_007" name="Bone.007" sid="Bone_007" type="JOINT">
+            <matrix sid="transform">1 0 -8.90101e-7 3.999997 0 1 0 0 8.90101e-7 0 1 -4.000002 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_008" name="Bone.008" sid="Bone_008" type="JOINT">
+            <matrix sid="transform">1 0 -1.36694e-6 3.999995 0 1 0 0 1.36694e-6 0 1 -8.000003 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_010" name="Bone.010" sid="Bone_010" type="JOINT">
+            <matrix sid="transform">1 0 -1.60536e-6 4.000002 0 1 0 0 1.60536e-6 0 1 3.999997 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_011" name="Bone.011" sid="Bone_011" type="JOINT">
+            <matrix sid="transform">1 0 -2.08219e-6 4.000005 0 1 0 0 2.08219e-6 0 1 7.999998 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_012" name="Bone.012" sid="Bone_012" type="JOINT">
+            <matrix sid="transform">1 0 -6.51683e-7 8 0 1 0 0 6.51683e-7 0 1 -5.02266e-6 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_013" name="Bone.013" sid="Bone_013" type="JOINT">
+            <matrix sid="transform">1 0 -1.12852e-6 7.999998 0 1 0 0 1.12852e-6 0 1 -4.000005 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_014" name="Bone.014" sid="Bone_014" type="JOINT">
+            <matrix sid="transform">1 0 -1.60536e-6 7.999995 0 1 0 0 1.60536e-6 0 1 -8.000005 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_016" name="Bone.016" sid="Bone_016" type="JOINT">
+            <matrix sid="transform">1 0 -1.84378e-6 8.000003 0 1 0 0 1.84378e-6 0 1 3.999995 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_017" name="Bone.017" sid="Bone_017" type="JOINT">
+            <matrix sid="transform">1 0 -2.32061e-6 8.000005 0 1 0 0 2.32061e-6 0 1 7.999995 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141596</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_024" name="Bone.024" sid="Bone_024" type="JOINT">
+            <matrix sid="transform">1 0 -8.90101e-7 -8 0 1 0 0 8.90101e-7 0 1 5.02266e-6 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_025" name="Bone.025" sid="Bone_025" type="JOINT">
+            <matrix sid="transform">1 0 -1.36694e-6 -8.000003 0 1 0 0 1.36694e-6 0 1 -3.999995 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_026" name="Bone.026" sid="Bone_026" type="JOINT">
+            <matrix sid="transform">1 0 -1.84378e-6 -8.000005 0 1 0 0 1.84378e-6 0 1 -7.999995 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_028" name="Bone.028" sid="Bone_028" type="JOINT">
+            <matrix sid="transform">1 0 -2.08219e-6 -7.999998 0 1 0 0 2.08219e-6 0 1 4.000005 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_029" name="Bone.029" sid="Bone_029" type="JOINT">
+            <matrix sid="transform">1 0 -2.55903e-6 -7.999995 0 1 0 0 2.55903e-6 0 1 8.000003 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141596</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_030" name="Bone.030" sid="Bone_030" type="JOINT">
+            <matrix sid="transform">1 0 -8.90101e-7 -4 0 1 0 0 8.90101e-7 0 1 2.51133e-6 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141594</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_031" name="Bone.031" sid="Bone_031" type="JOINT">
+            <matrix sid="transform">1 0 -1.36694e-6 -4.000002 0 1 0 0 1.36694e-6 0 1 -3.999997 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_032" name="Bone.032" sid="Bone_032" type="JOINT">
+            <matrix sid="transform">1 0 -1.84378e-6 -4.000005 0 1 0 0 1.84378e-6 0 1 -7.999998 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_034" name="Bone.034" sid="Bone_034" type="JOINT">
+            <matrix sid="transform">1 0 -2.08219e-6 -3.999997 0 1 0 0 2.08219e-6 0 1 4.000001 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141595</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <node id="wall_of_ugly_Bone_035" name="Bone.035" sid="Bone_035" type="JOINT">
+            <matrix sid="transform">1 0 -2.55903e-6 -3.999995 0 1 0 0 2.55903e-6 0 1 8.000005 0 0 0 1</matrix>
+            <extra>
+              <technique profile="blender">
+                <layer sid="layer" type="string">0</layer>
+                <roll sid="roll" type="float">-3.141596</roll>
+                <tip_x sid="tip_x" type="float">0</tip_x>
+                <tip_y sid="tip_y" type="float">-1</tip_y>
+                <tip_z sid="tip_z" type="float">0</tip_z>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="blender">
+              <layer sid="layer" type="string">0</layer>
+              <roll sid="roll" type="float">-3.141593</roll>
+              <tip_x sid="tip_x" type="float">0</tip_x>
+              <tip_y sid="tip_y" type="float">-1</tip_y>
+              <tip_z sid="tip_z" type="float">0</tip_z>
+            </technique>
+          </extra>
+        </node>
+        <node id="Plane" name="Plane" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#wall_of_ugly_Plane-skin">
+            <skeleton>#wall_of_ugly_Bone_Root</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material-material" target="#Material-material">
+                  <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

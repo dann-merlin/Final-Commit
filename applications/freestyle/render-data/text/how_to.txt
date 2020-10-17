@@ -1,0 +1,31 @@
+You are a Student who is currently working on a big project for one of his computer-science-courses. It is the day of the submission, but your files seem to have been scattered all over the Cyber-Space!
+It is your goal to collect all the files and commit them before they are swallowed by the Cyber-Sea (also known as the GarbageCollector).
+Once you have collected a file you will be able to commit it at a dedicated checkpoint. But watch out! There might be hidden bugs that need to be fixed before you can commit the file.
+
+Controls:
+W       - Move forward
+A/D     - Move left/right
+S       - Move backward
+LMB     - Shoot Grappling-Hook
+RMB     - Release Grappling-Hook
+R       - Pull yourself along rope
+E       - Interact with Checkpoints
+SHIFT   - Use Jetpack
+SPACE   - Jump
+M       - Mute Audio
+
+Jetpack features:
+While hanging on a rope you can use the Jetpack to give yourself a boost in the direction you are looking.
+While flying in the air the Jetpack will allow you to hover and control your movement in the 3D space.
+
+
+Cheat/Fun/Debug Controls:
+0       - Toggle Super-Easy-Mode
+1       - Switch to First-Person
+3       - Switch to Third-Person
+4       - Pause Physics Simulation
+P       - Pause Time
+V       - Go to Victory Screen
+F1      - SIGSEGV on Mode Switch
+F2/F3   - Switch Camera
+F4      - Debug GUI
